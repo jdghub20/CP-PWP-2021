@@ -67,29 +67,57 @@
 
 # final_answer = {"hey": 1, "Hey": 1, "what": 2, "are": 1, "you": 1, "doing": 1, "there": 1}
 
-sentence = "Hey what woop woop wop wop di dop dop there what are you doing"
+# sentence = "Hey what woop woop wop wop di dop dop there what are you doing"
 
 
 
-# for word in sentence.split():
-#   # if I am finding it for the first time, create a key with that word and set its value to 1
+# # for word in sentence.split():
+# #   # if I am finding it for the first time, create a key with that word and set its value to 1
 
-#   # If I have already seen the word... Then increment its' value by 1
+# #   # If I have already seen the word... Then increment its' value by 1
 
-#   if word not in final_dictionary:
+# #   if word not in final_dictionary:
+# #       final_dictionary[word] = 1
+# #   else:
+# #       final_dictionary[word] = final_dictionary[word] + 1
+
+# # print(final_dictionary)        
+
+# def word_frequency(sentence):
+#   final_dictionary ={}
+#   for word in sentence.split():
+#     if word not in final_dictionary:
 #       final_dictionary[word] = 1
 #   else:
-#       final_dictionary[word] = final_dictionary[word] + 1
+#       final_dictionary[word] += 1
+#   return final_dictionary 
 
-# print(final_dictionary)        
+# print(word_frequency(sentence))
 
-def word_frequency(sentence):
-  final_dictionary ={}
-  for word in sentence.split():
-    if word not in final_dictionary:
-      final_dictionary[word] = 1
-  else:
-      final_dictionary[word] += 1
-  return final_dictionary 
+# Things required fro the game
+# board
+# display board
+# play game function
+# check win
+   # check rows
+   # check columns
+   # check diagnols
+# check for tie
 
-print(word_frequency(sentence))
+
+board = ["_", "_", "_",
+         "_", "_", "_",
+         "_", "_", "_",]
+
+def display_board():
+  print(board[0] + " | " + board[1] + " | " + board[2])
+  print(board[3] + " | " + board[4] + " | " + board[5])
+  print(board[6] + " | " + board[7] + " | " + board[8])
+
+def play_game():
+  
+  # Display initial board
+  display_board()
+
+  handle_turn()
+
